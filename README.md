@@ -1,4 +1,4 @@
-# Aluisio ESLint config
+# Aluisio ESLint config for Next.js, React and NodeJS
 
 ## Whats included?
 

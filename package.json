@@ -1,7 +1,7 @@
 {
   "name": "@aluisio/eslint-config",
   "version": "0.0.1-beta.1",
-  "description": "ESLint configuration",
+  "description": "ESLint config for Next.js, React and NodeJS",
   "private": false,
   "main": "index.js",
   "license": "MIT",
