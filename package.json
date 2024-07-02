@@ -8,7 +8,7 @@
   "author": "Aluisio de Avila",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aluisio/eslint-config.git"
+    "url": "git+https://github.com/Aluisio/eslint-config.git"
   },
   "keywords": [
     "eslint",
