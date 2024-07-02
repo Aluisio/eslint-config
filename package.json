@@ -1,0 +1,28 @@
+{
+  "name": "@aluisio/eslint-config",
+  "version": "0.0.1.beta-1",
+  "description": "ESLint configuration",
+  "private": false,
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Aluisio de Avila",
+  "repository": {
+    "url": "https://github.com/Aluisio/eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "next",
+    "react",
+    "node"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.0.0",
+    "typescript": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "dependencies": {}
+}
