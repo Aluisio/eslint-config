@@ -7,7 +7,8 @@
   "license": "MIT",
   "author": "Aluisio de Avila",
   "repository": {
-    "url": "https://github.com/Aluisio/eslint-config"
+    "type": "git",
+    "url": "https://github.com/Aluisio/eslint-config.git"
   },
   "keywords": [
     "eslint",
