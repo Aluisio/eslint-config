@@ -4,7 +4,7 @@
   "description": "ESLint config for Next.js, React and NodeJS",
   "private": false,
   "main": "index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "author": "Aluisio de Avila",
   "repository": {
     "type": "git",
