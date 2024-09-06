@@ -66,6 +66,7 @@ module.exports = {
         },
       },
     ],
+    'no-plusplus': 'off'
   },
   settings: {
     'import/extensions': [
