@@ -1,8 +1,8 @@
-# ESLint config for Next.js, React and NodeJS
+# ESLint config for React and NodeJS
 
 ## Whats included?
 
-- Airbnb config base;
+- Airbnb config;
 - Import plugin;
 - React plugin;
 - React Hooks plugin;
@@ -12,46 +12,41 @@
 
 Install dependencies:
 ```
-npm i -D eslint @aluisio/eslint-config
+npm i -D @aluisio/eslint-config
 ```
 
-### React with Next.js
-Inside `.eslintrc.json`
+### React
+Inside `eslint.config.mjs`
 ```
-{
-  "extends": [
-    "@aluisio/eslint-config/next"
-  ]
-}
-```
+import config from '@aluisio/eslint-config/react.mjs'
 
-### React without Next.js
-Inside `.eslintrc.json`
-```
-{
-  "extends": "@aluisio/eslint-config/react"
-}
+export default config
 ```
 
 ### Node.js
-Inside `.eslintrc.json`
+Inside `eslint.config.mjs`
 ```
-{
-  "extends": "@aluisio/eslint-config/node"
-}
+import config from '@aluisio/eslint-config/node.mjs'
+
+export default config
 ```
 
 ##
 
 ### Override Settings
-You can override any ESLint config by changing your own `.eslintrc.json` file. The example below changes Enforce a maximum line length.
+You can override any ESLint config by changing your own `eslint.config.mjs` file. The example below changes Enforce a maximum line length.
 ```
-{
-  "extends": [
-    "@aluisio/eslint-config/next",
-    "rules": {
-      "max-len": [ "warn", { "code": 180 } ]
+import { defineConfig } from 'eslint/config'
+
+import config from '@aluisio/eslint-config/node.mjs'
+
+export default defineConfig(
+  ...config,
+  {
+    rules: {
+      'max-len': ['warn', { code: 180 }],
     }
-  ]
-}
+  }
+)
+
 ```
