@@ -4,6 +4,7 @@
   "description": "ESLint config for React and Node.js",
   "private": false,
   "main": "base.mjs",
+  "type": "module",
   "license": "Apache-2.0",
   "author": "Aluisio de Avila",
   "repository": {
@@ -26,15 +27,15 @@
     }
   },
   "dependencies": {
-    "@eslint/js": "^9.25.1",
-    "eslint": "^9.25.1",
-    "eslint-plugin-import": "^2.31.0",
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-import-helpers": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "neostandard": "^0.12.1",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.0"
+    "neostandard": "^0.12.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
   }
 }
