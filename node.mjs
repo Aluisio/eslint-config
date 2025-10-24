@@ -12,7 +12,7 @@ export default [
   ...configs.base.recommended,
   ...configs.base.typescript,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.js', '**/*.ts'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -55,10 +55,10 @@ export default [
       ],
     },
     settings: {
-      'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+      'import/extensions': ['.js', '.ts'],
       'import/resolver': {
         node: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          extensions: ['.js', '.ts'],
         },
       },
     },

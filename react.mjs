@@ -15,7 +15,7 @@ export default [
   ...configs.react.hooks,
   ...configs.react.typescript,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -32,7 +32,7 @@ export default [
       'import-helpers': importHelpers,
       'react-hooks': reactHooks
     },
-    ignores: ['**/node_modules/**', '**/dist/**', '.next/**'],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**'],
     rules: {
       'react/jsx-filename-extension': 'off',
       'react/button-has-type': 'off',
