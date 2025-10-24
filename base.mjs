@@ -1,14 +1,17 @@
 // @ts-check
 
+import fs from 'node:fs'
+import path from 'node:path'
+import { includeIgnoreFile } from '@eslint/compat'
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
-import neostandard, { resolveIgnoresFromGitignore } from 'neostandard'
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
-export default [
+const gitignorePath = path.resolve('.', '.gitignore')
+
+const config = [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  ...neostandard({
-    ignores: resolveIgnoresFromGitignore(),
-  }),
+  ...(fs.existsSync(gitignorePath) ? [includeIgnoreFile(gitignorePath)] : []),
 ]
+
+export default config;

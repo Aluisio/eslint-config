@@ -1,6 +1,6 @@
 // @ts-check
 
-import { defineConfig } from 'eslint/config'
+import { configs } from 'eslint-config-airbnb-extended/legacy';
 import importHelpers from 'eslint-plugin-import-helpers'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -8,8 +8,12 @@ import globals from 'globals'
 import js from '@eslint/js'
 import config from './base.mjs'
 
-export default defineConfig([
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+export default [
   ...config,
+  ...configs.react.recommended,
+  ...configs.react.hooks,
+  ...configs.react.typescript,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -48,6 +52,7 @@ export default defineConfig([
         }
       ],
       '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
       '@stylistic/space-before-function-paren': 'off',
       'max-len': ['warn', { code: 500 }],
       'import/prefer-default-export': 'off',
@@ -88,4 +93,4 @@ export default defineConfig([
       },
     },
   },
-])
+]

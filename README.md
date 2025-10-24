@@ -42,17 +42,16 @@ export default config
 ### Override Settings
 You can override any ESLint config by changing your own `eslint.config.mjs` file. The example below changes Enforce a maximum line length.
 ```
-import { defineConfig } from 'eslint/config'
+import config from '@aluisio/eslint-config/node.mjs';
 
-import config from '@aluisio/eslint-config/node.mjs'
-
-export default defineConfig(
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+export default [
   ...config,
   {
     rules: {
       'max-len': ['warn', { code: 180 }],
-    }
-  }
-)
+    },
+  },
+];
 
 ```
