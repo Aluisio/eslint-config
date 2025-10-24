@@ -19,7 +19,7 @@
   ],
   "files": [
     "*.mjs",
-    "*.d.ts",
+    "types/**/*.d.ts",
     "README.md",
     "LICENSE"
   ],
