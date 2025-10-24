@@ -7,7 +7,7 @@
 
 ## Whats included?
 
-- Airbnb config;
+- Airbnb config extended;
 - Import plugin;
 - React plugin;
 - React Hooks plugin;
@@ -24,7 +24,7 @@ npm i -D @aluisio/eslint-config
 ### React
 Inside `eslint.config.mjs`
 ```
-import config from '@aluisio/eslint-config/react.mjs'
+import config from '@aluisio/eslint-config/react'
 
 export default config
 ```
@@ -32,7 +32,7 @@ export default config
 ### Node.js
 Inside `eslint.config.mjs`
 ```
-import config from '@aluisio/eslint-config/node.mjs'
+import config from '@aluisio/eslint-config/node'
 
 export default config
 ```
@@ -42,7 +42,7 @@ export default config
 ### Override Settings
 You can override any ESLint config by changing your own `eslint.config.mjs` file. The example below changes Enforce a maximum line length.
 ```
-import config from '@aluisio/eslint-config/node.mjs';
+import config from '@aluisio/eslint-config/node';
 
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [

@@ -19,36 +19,23 @@
   ],
   "files": [
     "*.mjs",
-    "types/**/*.d.ts",
+    "*.d.ts",
     "README.md",
     "LICENSE"
   ],
   "exports": {
     "./node": {
       "import": "./node.mjs",
-      "types": "./types/node.d.ts"
-    },
-    "./node.mjs": {
-      "import": "./node.mjs",
-      "types": "./types/node.d.ts"
+      "types": "./node.d.ts"
     },
     "./react": {
       "import": "./react.mjs",
-      "types": "./types/react.d.ts"
-    },
-    "./react.mjs": {
-      "import": "./react.mjs",
-      "types": "./types/react.d.ts"
+      "types": "./react.d.ts"
     }
   },
   "peerDependencies": {
     "eslint": ">=9",
     "typescript": ">=5"
-  },
-  "peerDependenciesMeta": {
-    "typescript": {
-      "optional": true
-    }
   },
   "dependencies": {
     "@eslint/compat": "^1.4.0",
