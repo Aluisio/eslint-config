@@ -44,14 +44,15 @@ You can override any ESLint config by changing your own `eslint.config.mjs` file
 ```
 import config from '@aluisio/eslint-config/node';
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
-export default [
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
   ...config,
   {
     rules: {
       'max-len': ['warn', { code: 180 }],
     },
   },
-];
+]);
 
 ```

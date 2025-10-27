@@ -1,13 +1,13 @@
 // @ts-check
 
+import js from '@eslint/js'
+import { defineConfig } from 'eslint/config';
 import { configs } from 'eslint-config-airbnb-extended/legacy';
 import importHelpers from 'eslint-plugin-import-helpers'
 import globals from 'globals'
-import js from '@eslint/js'
 import config from './base.mjs'
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
-export default [
+export default defineConfig([
   ...config,
   ...configs.base.recommended,
   ...configs.base.typescript,
@@ -20,7 +20,7 @@ export default [
     },
     plugins: {
       js,
-      'import-helpers': importHelpers,
+      'import-helpers': /** @type {any} */ (importHelpers),
     },
     ignores: ['**/node_modules/**', '**/dist/**'],
     rules: {
@@ -34,6 +34,7 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/naming-convention': 'warn',
       'max-len': ['warn', { code: 500 }],
       'import/prefer-default-export': 'off',
       'class-methods-use-this': 'off',
@@ -63,4 +64,4 @@ export default [
       },
     },
   },
-]
+])

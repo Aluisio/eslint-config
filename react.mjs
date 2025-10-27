@@ -1,15 +1,14 @@
 // @ts-check
 
+import js from '@eslint/js'
+import { defineConfig } from 'eslint/config';
 import { configs } from 'eslint-config-airbnb-extended/legacy';
 import importHelpers from 'eslint-plugin-import-helpers'
 import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
-import js from '@eslint/js'
 import config from './base.mjs'
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
-export default [
+export default defineConfig([
   ...config,
   ...configs.react.recommended,
   ...configs.react.hooks,
@@ -29,8 +28,7 @@ export default [
     plugins: {
       js,
       react,
-      'import-helpers': importHelpers,
-      'react-hooks': reactHooks
+      'import-helpers': /** @type {any} */ (importHelpers),
     },
     ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**'],
     rules: {
@@ -53,6 +51,7 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/naming-convention': 'warn',
       '@stylistic/space-before-function-paren': 'off',
       'max-len': ['warn', { code: 500 }],
       'import/prefer-default-export': 'off',
@@ -93,4 +92,4 @@ export default [
       },
     },
   },
-]
+]);
