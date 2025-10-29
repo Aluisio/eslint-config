@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      id-token: write
       contents: write
       packages: write
 
@@ -44,15 +45,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      #      - name: Build package
-      #        run: npm run build --if-present
-
       - name: Publish to npm
         run: |
           if [ "${{ github.event.inputs.release_type }}" = "beta" ]; then
-            npm publish --tag beta
+            npm publish --provenance --tag beta --access public
           else
-            npm publish
+            npm publish --provenance --access public
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
